@@ -103,12 +103,6 @@ header {
   }
 }
 @media (min-width: 100px) and (max-width: 600px) {
-  .gameContainer {
-    
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: repeat(3, 20vw);
-    position: relative;
-  }
   .boxText {
     font-size: 11vw;
   }
