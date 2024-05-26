@@ -1,5 +1,5 @@
 let backGroundMusic = new Audio('backgroundMusic.mp3');
-// backGroundMusic.play();
+backGroundMusic.play();
 let gameOverSound = new Audio("gameOver.mp3");
 let winSound = new Audio("winSound.mp3");
 backGroundMusic.addEventListener('ended', () => {

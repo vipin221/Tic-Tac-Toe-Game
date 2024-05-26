@@ -1,114 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Da 2", sans-serif;
+  user-select: none;
 }
 
-header{
-    width: 100%;
-    background-color: rgb(65, 37, 65);
-    color: white;
-    font-size: 4rem;
-    text-align:  center;
-    font-weight: 600;
-    font-family: "Baloo Da 2", sans-serif;
+header {
+  width: 100%;
+  background-color: rgb(65, 37, 65);
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 600;
+  text-wrap: nowrap;
 }
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    /* background-color: aqua; */
-    height: calc(100vh - 6rem);
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: space-evenly;
 
+  height: calc(100vh - 6rem);
+  align-items: center;
 }
-.leftContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
-    flex-direction: column;
-    height: 80%;
-}
-
-.gameContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 10vw);
-    grid-template-rows: repeat(3,10vw);
-    
-    position: relative; 
-}
-.line{
-    position: absolute;
-    border: 2px solid rgb(201, 60, 60);
-    transform-origin: 0%;
-    transition: width 300ms ease-in-out;
-}
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vh;
-    border: 2px solid black;
-    cursor: pointer;
-    font-family: "Baloo Da 2", sans-serif;
-}
-.box:hover{
-   background-color: rgb(202, 249, 249);
-   transition: all 200ms;
-}
-.infoContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* background-color: pink; */
-}
-.winImg >img{
-    width: 0;
-}
-#reset{
-    height: 2rem;
-    width: 4rem;
-    border-radius: 4px;
-    background-color: rgb(251, 194, 251);
-    border: 1px solid black;
-    font-family: "Baloo Da 2", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    box-shadow: 4px 4px 7px rgb(65, 37, 65);
-    cursor: pointer;
+.leftContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-direction: column;
+  height: 80%;
 }
 
-.bt-0{
-    border-top: 0;
-
+.gameContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  position: relative;
 }
-.bb-0{
-    border-bottom: 0;
-
+.line {
+  position: absolute;
+  border: 2px solid rgb(201, 60, 60);
+  transform-origin: 0%;
+  transition: width 300ms ease-in-out;
 }
-.bl-0{
-    border-left: 0;
-
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vh;
+  border: 2px solid black;
+  cursor: pointer;
+  font-family: "Baloo Da 2", sans-serif;
 }
-.br-0{
-    border-right: 0;
 
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.winImg > img {
+  width: 0;
+}
+#reset {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 4px;
+  background-color: rgb(251, 194, 251);
+  border: 1px solid black;
+  font-family: "Baloo Da 2", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 4px 4px 7px rgb(65, 37, 65);
+  cursor: pointer;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.br-0 {
+  border-right: 0;
 }
 @media only screen and (max-width: 800px) {
-  body {
-    .container{
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .leftContainer{
-        justify-content: space-evenly;
-        gap: 20px;
-        height: 50%;
-        width: 100%;
-    }
-    .infoContainer{
-        justify-content: flex-start;
-    }
+  .container {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .leftContainer {
+    justify-content: space-evenly;
+    gap: 20px;
+    height: 50%;
+    width: 100%;
+  }
+  .infoContainer {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 100px) and (max-width: 600px) {
+  .gameContainer {
+    
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+    position: relative;
+  }
+  .boxText {
+    font-size: 11vw;
   }
 }
